@@ -1,0 +1,675 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+height: fit-content;
+position: relative;
+}
+
+button{
+    border: 1.5px white solid;
+}
+
+
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 3rem 0rem;
+
+}
+
+.logo{
+    width: 13%;
+}
+
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav-item{
+    font-size: 95%;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+
+.nav-item:hover{
+    color:hsl(0, 94%, 66%) ;
+}
+
+.login{
+    text-transform: uppercase;
+    background-color:  hsl(0, 94%, 66%);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+    height: 2.5rem;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    font-size: 110%;
+    padding: 0 2.5rem;
+}
+
+.login:hover{
+    background-color: white;
+    color: hsl(0, 94%, 66%);
+    transition: 0.3s;
+    border: 1.5px hsl(0, 94%, 66%) solid;
+
+}
+
+.mobile-nav-btn{
+    display: none;
+}
+
+.main{
+    align-items: center;
+    
+}
+
+.hero{
+    padding: 0rem 12rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    position: relative;
+    gap: 2rem;
+}
+
+.left-hero{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.hero-title{
+    font-size: 400%;
+}
+
+.hero-content{
+    font-size: 130%;
+    line-height: 2rem;
+    color: rgb(169, 169, 169);
+}
+
+.get-buttons{
+    display: flex;
+    gap: 1rem;
+    
+}
+
+.chrome-button{
+    background-color:hsl(231, 69%, 60%) ; 
+    color: white; 
+}
+
+.chrome-button:hover{
+    background-color: white;
+    color: hsl(231, 69%, 60%);
+    border: 1.5px hsl(231, 69%, 60%) solid;
+}
+
+.firefox-button{
+    color:  hsl(229, 31%, 21%);
+    background-color:rgb(246, 246, 246); 
+    box-shadow: 1px 2px 8px 2px rgb(216, 215, 215); 
+}
+
+.firefox-button:hover{
+    border: 1.5px hsl(231, 69%, 60%) solid;
+    
+}
+
+.button{
+    padding: 7px 1rem;
+    font-size: 120%;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.hero-image{
+    /* height: 38rem; */
+    width: 48%;
+    z-index: 10;
+    
+    
+}
+
+.color{
+    background-color:hsl(231, 69%, 60%) ; 
+    height: 75%;
+    width: 25%;
+    right: 0;
+    border-radius: 20rem 0 0 20rem;
+    top: 10rem;
+    position: absolute;
+}
+
+.features{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    margin-top: 10rem;
+    gap: 2rem;
+    text-align: center;
+}
+
+.feature-title{
+    font-size: 300%;
+}
+
+
+.features-content{
+    display: flex;
+    font-size: 140%;
+    line-height: 2.5rem;
+    color: rgb(169, 169, 169);
+}
+
+.bookmark-tab{
+    margin-top: 3rem;
+    padding: 3rem 12rem;
+}
+
+.tab{
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    font-size: 150%;
+}
+
+.tab-title{
+    width: 15rem;
+    display: flex;
+    justify-content: center;
+    height: 5rem;
+    font-weight: bold;
+    color: rgb(64, 64, 64);
+    cursor: pointer;
+    align-items: center;
+    text-align: center;
+}
+
+.tab-title:hover{
+    transform: scale(105%);
+    transform: translateY(-5%);
+    transition: 0.3s;
+    color: hsl(0, 94%, 66%);
+}
+
+.tab-title-active{
+    border-bottom: 3px red solid;
+    transition: 0.15s;
+}
+
+
+.tabbed-component{
+    margin-top: 4rem;
+    height: 30rem;
+    position: relative;
+}
+
+.tabbed-color{
+    top: 12rem;
+    height: 80%;
+    width: 40%;
+    left: 0;
+    border-radius: 0 20rem 20rem 0;
+    
+}
+
+.tabbed-item{
+    display: flex;
+    align-items: center;
+    gap: 12rem;
+    position: absolute;
+    opacity: 0%;
+    pointer-events: none;
+    visibility: hidden;
+}
+
+.tabbed-item-active{
+    opacity: 100%;
+    pointer-events: all;
+    visibility: visible;
+    transition: 0.7s;
+}
+
+.tab-image{
+    width: 38%;
+    position: relative;
+    z-index: 10;
+    margin-left: 5rem;
+}
+
+.tabbed-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.tabbed-title{
+    font-size: 250%;
+
+}
+
+.tabbed-text-content{
+
+    font-size: 140%;
+    width: 90%;
+    line-height: 2rem;
+    color: rgb(169, 169, 169);
+}
+
+.more{
+    padding: 0.7rem ;
+    border-radius: 5px;
+    color: white;
+    background-color:hsl(231, 69%, 60%) ;
+   /* left: 50%; */
+   /* display: none; */
+   /* transform: translateX(50%); */
+}
+
+.more:hover{
+    color: hsl(231, 69%, 60%);
+    border-color: hsl(231, 69%, 60%);
+    background-color: white;
+}
+
+.extension-section{
+    margin-top: 7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.extension-container{
+    display: flex;
+    gap: 1.5rem;
+    height: 40rem;
+    justify-content: center;
+    margin-top: 2rem;    
+}
+
+.extension{
+    display: flex;
+    width: 20rem;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 1rem;
+    gap: 1rem;
+    box-shadow: 3px 3px 7px 1px rgba(226, 222, 222, 0.719);
+    height:25rem;
+    
+}
+
+
+.extension-logo{
+    width: 50%;
+
+}
+
+.extension-title{
+    font-size: 130%;
+    
+}
+
+.version-text{
+    color:rgb(169, 169, 169) ;
+    margin-bottom: 1.5rem;
+    
+}
+
+.dot{
+    margin-bottom: 1.5rem;
+    width: 100%;
+}
+
+.extension-button{
+    background-color:hsl(231, 69%, 60%) ; 
+    font-size: 95%;
+    width: 90%;
+    padding: 1rem;
+    border-radius: 4px;
+    color: white;
+   
+}
+
+.extension-button:hover{
+    background-color: white;
+    transition: 0.3s;
+    color: hsl(231, 69%, 60%);
+    border: solid 1.5px hsl(231, 69%, 60%);
+
+}
+
+.ex-2{
+    transform: translateY(15%);
+}
+
+.ex-3{
+    transform: translateY(30%);
+}
+
+.faq{
+    margin-top: 1rem;
+}
+
+.faq h3{
+    width: 60rem;
+}
+
+.question-section{
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.question-container{
+    display: flex;
+    flex-direction: column;
+    padding: 0 4rem;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px rgba(128, 128, 128, 0.342) solid;
+    border-bottom: 1px rgba(128, 128, 128, 0.342) solid;
+    /* padding: 2rem 0 ; */
+}
+
+.question{
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    color: hsl(231, 69%, 60%);
+    width: 50rem;
+    justify-content: space-between;
+    /* background-color: aqua; */
+    padding: 2rem;
+    /* padding-bottom: 0; */
+}
+
+.question p{
+    font-size: 170%;
+}
+
+.question p:hover{
+    color: hsl(0, 94%, 66%);
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.icon-arrow{
+    height: 3rem;
+    /* background-color: aquamarine; */
+    padding: 1rem;
+    transition: 0.5s;
+}
+
+.answer{
+    display: none;
+    width: 50rem;
+    color:rgb(169, 169, 169);
+    margin-top: 1rem;
+    padding: 0 2rem 2rem 2rem;
+    font-size: 120%;
+    align-items: center;
+    line-height: 2rem;
+}
+
+
+.footer-more{
+    margin-top: 5rem;
+    margin-bottom: 10rem;
+}
+
+.contact{
+    background-color: hsl(231, 69%, 60%);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+}
+
+.joined{
+    font-size: 150%;
+    letter-spacing: 0.4rem;
+}
+
+.contact h1{
+    font-size: 250%;
+    line-height: 3.5rem;
+    text-align: center  ;
+}
+
+.email{
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.email-input{
+    height: 3rem;
+    padding: 0 2rem;
+    border-radius: 3px;
+    outline: none;
+    border: none;
+}
+
+.email-btn{
+    padding: 0 1rem;
+    border-radius: 3px;
+    height: 2.5rem;
+    color:hsl(231, 69%, 60%);  
+}
+
+.footer-nav{
+    background-color: hsl(229, 31%, 21%);
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    height: 7rem;
+    justify-content: space-around;
+}
+
+.footer-nav-list{
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+    cursor: pointer;
+    font-size: 130%;
+}
+
+
+.footer-nav-item:hover{
+    color: hsl(0, 94%, 66%);
+}
+
+.footer-logo{
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+}
+
+.socials{
+    display: flex;
+    gap: 2rem;
+}
+
+.active{
+    display: block;
+}
+
+.down-arrow{
+   transform: rotate(180deg);
+   transition: 0.5s;
+}
+
+.login-modal{
+    width: 27%;
+    background-color: hsl(231, 69%, 60%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: absolute;
+    height: 40rem;
+    gap: 3rem;
+    top: 10rem;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1000;
+    border-radius: 10px;
+    display: none;
+}
+
+.login-modal input{
+    height: 3rem;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    padding: 1rem;
+
+}
+
+.blur{
+    filter: blur(2rem);
+}
+
+
+.modal{
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    /* transform: translateY(-50%); */
+    background-color: rgb(93, 129, 237);
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3% 5%;
+    border-radius: 5px;
+    z-index: 999;
+    position: fixed;
+    transition: 0.5s;
+}
+
+.title{
+    font-size: 3rem;
+    font-style: italic;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Ronman', serif;
+    color: white;
+}
+
+.inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 25%;
+    column-gap: 15%;
+    justify-content: center;
+    margin: 10% 0 20% 0;
+    
+    width: 100%;
+}
+
+.each-input{
+    width: 100%;
+    padding: 5% 10%;
+    border-radius: 1rem;
+    border: none;
+    outline: none;
+    font-size: 1.7rem;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.685);
+    z-index: 997;
+    transition: 1s;
+}
+
+.s-button{
+    border: none;
+    background-color: rgb(112, 145, 246);
+    padding: 1rem 4rem;
+    border-radius: 2rem;
+    color: white;
+    transition: 0.5s;
+}
+
+.s-button:hover{
+    background-color: rgb(74, 119, 252);
+    transform: scale(107%);
+    box-shadow: 1px 1px 10px 1px rgb(186, 185, 185);
+}
+
+.hidden{
+    visibility: none;
+    opacity:0;
+    pointer-events: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
